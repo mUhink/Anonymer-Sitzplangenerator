@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Sitzplangenerator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Sitzplangenerator</h1>
+    <form id="settingsForm">
+        <label for="studentCount">Anzahl der Schüler (1-40):</label>
+        <input type="number" id="studentCount" min="1" max="40" required>
+
+        <label for="rows">Anzahl der Reihen:</label>
+        <input type="number" id="rows" min="1" required>
+
+        <label for="columns">Anzahl der Tische pro Reihe:</label>
+        <input type="number" id="columns" min="1" required>
+
+        <label for="avoidPairs">Paare, die nicht nebeneinander sitzen sollen (z.B. 4-9,6-12):</label>
+        <input type="text" id="avoidPairs">
+
+        <label for="enforcePairs">Paare, die nebeneinander sitzen sollen (z.B. 6+9,2+5):</label>
+        <input type="text" id="enforcePairs">
+
+        <button type="submit">Sitzplan generieren</button>
+    </form>
+
+    <div id="seatingPlan"></div>
+
+    <button id="exportButton" style="display:none;">Als PNG exportieren</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
